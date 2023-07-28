@@ -31,7 +31,7 @@ app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
     const plt="please"
     const arc="-file"
-    console.log(arc)
+    console.log(__dirname)
    //res.sendFile(__dirname+"/LEARN.html")
    res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
