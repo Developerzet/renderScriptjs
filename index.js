@@ -23,7 +23,7 @@ app.use(bodyParse.urlencoded())
 app.use(bodyParse.json())
 app.use(
   '/static',
-  express.static(path.join(__dirname, 'views')),
+  express.static(path.join(__dirname, 'static')),
 )
 
 app.set('view engine','ejs')
