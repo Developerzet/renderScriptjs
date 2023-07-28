@@ -26,6 +26,7 @@ app.use(
   express.static(path.join(__dirname, 'static')),
 )
 
+app.set('views', './views')
 app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
     const plt="please"
