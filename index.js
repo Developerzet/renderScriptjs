@@ -34,7 +34,7 @@ app.get('/' , (req , res)=>{
    //res.sendFile(__dirname+"/LEARN.html")
    res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
-}).listen(5000,()=>{
+}).listen(3004,()=>{
     console.log("Server running..".rainbow)
 })
 /*app.post("/write",(req,res)=>{
