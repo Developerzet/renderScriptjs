@@ -26,14 +26,14 @@ app.use(
   express.static(path.join(__dirname, 'static')),
 )
 
-app.set('views', './views')
+app.set('views', 'views')
 app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
     const plt="please"
     const arc="-file"
     console.log(arc)
    //res.sendFile(__dirname+"/LEARN.html")
-   res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
+   res.render("Learn.ejs",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
 }).listen(3004,()=>{
     console.log("Server running..".rainbow)
