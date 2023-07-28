@@ -32,8 +32,8 @@ app.get('/' , (req , res)=>{
     const plt="please"
     const arc="-file"
     console.log(__dirname)
-   //res.sendFile(__dirname+"/LEARN.html")
-   res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
+   res.sendFile("/LEARN.html")
+  // res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
 }).listen(3004,()=>{
     console.log("Server running..".rainbow)
