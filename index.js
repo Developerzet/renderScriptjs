@@ -24,8 +24,8 @@ app.use(bodyParse.json())
 
 app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
-    const plt=System.platform()
-    const arc=System.type()
+    const plt="please"
+    const arc="-file"
     console.log(arc)
    //res.sendFile(__dirname+"/LEARN.html")
    res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
