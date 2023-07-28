@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body onload="onload()">
+<h1 align="center" style="color:darkgreen;">ServerZ</h1>
+ <h2 >Server -<span style="color:darkblue;"></span></h2>
+ <form action="/write" method="post">
+   <input type="text" name="name"><br><input type="password" name="password">
+   <input type="file" name="file1" onchange="DATA(this)">
+   <input type="submit" name="">
+ </form>
+ 
+ <a href="/download">download</a>
+
+ <img src="" height="240px" width="480px">
+ <script type="text/javascript">
+  function onload() {
+  var temp=document.getElementsByTagName('span')
+   temp[0].textContent=document.URL;
+  }
+   function DATA(input){
+        var fileData=input.files[0]
+        var filr=new FileReader()
+        filr.readAsDataURL(fileData)
+        filr.onload=function(){
+          console.log(filr.result)
+        var img=document.getElementsByTagName("img")
+        img[0].src=filr.result
+        }
+        
+    }
+  
+ </script>
+</body>
+</html>
