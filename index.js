@@ -33,6 +33,8 @@ app.get('/' , (req , res)=>{
     const arc="-file"
   const name="node"
     console.log(__dirname)
+  let user = 'Bob'
+console.log(`We love ${user}.`)
    //res.sendFile("./LEARN.html")
   res.send("<h1 style='color:blue;'>serverZ ${name}</h1><br>"+plt+":"+arc)
   // res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
