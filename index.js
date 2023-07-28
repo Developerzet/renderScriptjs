@@ -33,7 +33,7 @@ app.get('/' , (req , res)=>{
     const arc="-file"
     console.log(arc)
    //res.sendFile(__dirname+"/LEARN.html")
-   res.render("Learn.ejs",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
+   res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
 }).listen(3004,()=>{
     console.log("Server running..".rainbow)
