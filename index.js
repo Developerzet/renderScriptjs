@@ -3,11 +3,11 @@ var mdl2=require("./def_modules/mdl2")
 var clr=require('colors')
 var express=require('express')
 const app=express()
-var path=require('path')
-var file=require('fs')
+//var path=require('path')
+//var file=require('fs')
 const bodyParse = require("body-parser")
 //var foo=require("./config")
-var System=require('os') //Use Multer lib to store file input buffer;
+//var System=require('os') //Use Multer lib to store file input buffer;
 
 /*const stc=require("yahoo-stock-api").default
 const nse=new stc()
@@ -30,7 +30,7 @@ app.get('/' , (req , res)=>{
    //res.sendFile(__dirname+"/LEARN.html")
    res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
-}).listen(3000,()=>{
+}).listen(5000,()=>{
     console.log("Server running..".rainbow)
 })
 /*app.post("/write",(req,res)=>{
