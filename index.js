@@ -7,7 +7,7 @@ var path=require('path')
 //var file=require('fs')
 const bodyParse = require("body-parser")
 //var foo=require("./config")
-//var System=require('os') //Use Multer lib to store file input buffer;
+var System=require('os') //Use Multer lib to store file input buffer;
 
 /*const stc=require("yahoo-stock-api").default
 const nse=new stc()
@@ -29,7 +29,7 @@ app.use(
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
-    const plt=os.platform()
+    const plt=System.platform()
     const arc="-file"
   const name="node"
     console.log(__dirname)
