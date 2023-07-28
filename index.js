@@ -32,7 +32,8 @@ app.get('/' , (req , res)=>{
     const plt="please"
     const arc="-file"
     console.log(__dirname)
-   res.sendFile("./LEARN.html")
+   //res.sendFile("./LEARN.html")
+  res.send("<h1 style='color:blue;'>serverZ</h1><br>"+plt+":"+arc)
   // res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
 }).listen(3004,()=>{
