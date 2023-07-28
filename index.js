@@ -3,7 +3,7 @@ var mdl2=require("./def_modules/mdl2")
 var clr=require('colors')
 var express=require('express')
 const app=express()
-//var path=require('path')
+var path=require('path')
 //var file=require('fs')
 const bodyParse = require("body-parser")
 //var foo=require("./config")
@@ -21,6 +21,10 @@ file.writeFileSync("text.txt",Info)*/
 app.use(express.json())
 app.use(bodyParse.urlencoded())
 app.use(bodyParse.json())
+app.use(
+  '/static',
+  express.static(path.join(__dirname, 'views')),
+)
 
 app.set('view engine','ejs')
 app.get('/' , (req , res)=>{
