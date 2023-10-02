@@ -35,7 +35,7 @@ app.get('/' , (req , res)=>{
     //console.log(__dirname)
   let user = 'Bob'
 //console.log(`We love ${user}.`)
-   res.sendFile("index.html", { root: __dirname })
+   res.sendFile("LEARN.html", { root: "https://github.com/Developerzet/renderScriptjs/blob/main/" })
   //res.send(`We love ${user}.`+plt+":"+arc)
    //res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
