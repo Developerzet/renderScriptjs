@@ -45,13 +45,13 @@ app.get('/' , (req , res)=>{
 app.post("/write",(req,res)=>{
     //console.log(req.body)
    var store=JSON.stringify(req.body)
-file.appendFileSync("text.txt",store)
+file.appendFileSync(__dirname+"/text.txt",store)
 console.log("SUCCESS.")
 res.send("submited.")
 })
 app.get("/download",(req,res)=>{
    const file=__dirname;
-    res.download("text.txt",(err)=>{
+    res.download(__dirname+"/text.txt",(err)=>{
         if(err){
             console.log(err)
         } } )
