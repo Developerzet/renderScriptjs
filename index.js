@@ -42,7 +42,7 @@ app.get('/' , (req , res)=>{
 }).listen(3004,()=>{
     console.log("Server running..".rainbow)
 })
-/*app.post("/write",(req,res)=>{
+app.post("/write",(req,res)=>{
     //console.log(req.body)
    var store=JSON.stringify(req.body)
 file.appendFileSync("text.txt",store)
@@ -57,4 +57,4 @@ app.get("/download",(req,res)=>{
         } } )
 
 
-})*/
+});
