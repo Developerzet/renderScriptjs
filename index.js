@@ -1,13 +1,14 @@
-var mdl=require("./mdl")
-var mdl2=require("./def_modules/mdl2")
-var clr=require('colors')
-var express=require('express')
+const mdl=require("./mdl")
+const mdl2=require("./def_modules/mdl2")
+const clr=require('colors')
+const server = require("http");
+const express=require('express')
 const app=express()
-var path=require('path')
+const path=require('path')
 //var file=require('fs')
 const bodyParse = require("body-parser")
 //var foo=require("./config")
-var System=require('os') //Use Multer lib to store file input buffer;
+const System=require('os') //Use Multer lib to store file input buffer;
 
 /*const stc=require("yahoo-stock-api").default
 const nse=new stc()
@@ -18,6 +19,7 @@ file.writeFileSync("text.txt",Info)*/
 //nse.getSymbol({"symbol":"sbin.ns"}).then(console.log)
 //nse.getTidyName("sbin.ns").then(console.log)
 
+const Server = server.createServer(app);
 app.use(express.json())
 app.use(bodyParse.urlencoded())
 app.use(bodyParse.json())
@@ -39,8 +41,6 @@ app.get('/' , (req , res)=>{
   //res.send(`We love ${user}.`+plt+":"+arc)
    //res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
-}).listen(3004,()=>{
-    console.log("Server running..".rainbow)
 })
 app.post("/write",(req,res)=>{
     //console.log(req.body)
@@ -57,4 +57,8 @@ app.get("/download",(req,res)=>{
         } } )
 
 
-});
+})
+
+Server.listen(3004,()=>{
+    console.log("Server running..".rainbow)
+})
