@@ -22,10 +22,10 @@
   function onload() {
   var temp=document.getElementsByTagName('span')
    temp[0].textContent=document.URL;
+    document.getElememntById("auth").textContent = `storage:${localStorage.lenth}`;
     if(localStorage.getItem("isAUTH")==null){
       localStorage.setItem("isAUTH",true);
     }
-    document.getElememntById("auth").textContent = `storage:${localStorage.lenth}`;
   }
    function DATA(input){
         var fileData=input.files[0]
