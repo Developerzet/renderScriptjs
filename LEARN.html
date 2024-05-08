@@ -8,6 +8,7 @@
 <body onload="onload()">
 <h1 align="center" style="color:darkgreen;">ServerZ</h1>
  <h2 >Server -<span style="color:darkblue;"></span></h2>
+  <h1 id = "auth"></h1>
  <form action="/write" method="post">
    <input type="text" name="name"><br><input type="password" name="password">
    <input type="file" name="file1" onchange="DATA(this)">
@@ -23,6 +24,7 @@
    temp[0].textContent=document.URL;
     if(localStorage.getItem("isAUTH")==null){
       localStorage.setItem("isAUTH",true);
+      document.getElememntById("auth").textContent = `storage:${localStorage.lenth}`;
   }
    function DATA(input){
         var fileData=input.files[0]
