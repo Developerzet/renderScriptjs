@@ -24,8 +24,8 @@
    temp[0].textContent=document.URL;
     if(localStorage.getItem("isAUTH")==null){
       localStorage.setItem("isAUTH",true);
-      document.getElememntById("auth").textContent = `storage:${localStorage.lenth}`;
     }
+    document.getElememntById("auth").textContent = `storage:${localStorage.lenth}`;
   }
    function DATA(input){
         var fileData=input.files[0]
