@@ -37,9 +37,9 @@ app.get('/' , (req , res)=>{
     //console.log(__dirname)
   let user = 'Bob'
 //console.log(`We love ${user}.`)
-   res.sendFile(__dirname+"/LEARN.html")
+  // res.sendFile(__dirname+"/LEARN.html")
   //res.send(`We love ${user}.`+plt+":"+arc)
-   //res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
+   res.render("Learn",{"file":plt,"obj":arc,"content1":mdl.run(),"content2":mdl2.run2()})
 
 })
 app.post("/write",(req,res)=>{
