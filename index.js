@@ -54,6 +54,14 @@ app.get("/download",(req,res)=>{
           res.send("error");
         } } )
 })
+app.get("/delete",function(req,res){
+  fs.unlink(__dirname+"/text.txt",(err)=>{
+    if(err){
+      res.send("error-- "+err);
+    }
+    res.send("deleted!");
+  })
+})
 
 Server.listen(3004,()=>{
     console.log("Server running..".rainbow)
