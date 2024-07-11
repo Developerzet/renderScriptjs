@@ -57,7 +57,7 @@ app.get("/download",(req,res)=>{
 app.get("/delete",function(req,res){
   fs.unlink(__dirname+"/text.txt",(err)=>{
     if(err){
-      res.send("error-- "+err);
+      res.send("error");
     }
     res.send("deleted!");
   })
