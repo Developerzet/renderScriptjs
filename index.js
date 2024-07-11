@@ -54,7 +54,7 @@ app.get("/download",(req,res)=>{
           res.send("error");
         } } )
 })
-app.get("/delete",function(req,res){
+app.get("/delete",(req,res)=>{
   fs.unlink(__dirname+"/text.txt",(err)=>{
     if(err){
       res.send("error");
